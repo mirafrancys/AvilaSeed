@@ -1,0 +1,18 @@
+{
+  "TOPBAR": {
+    "TITLE": "MyStore",
+    "ENGLISH": "English",
+    "FRENCH": "French",
+    "SPANISH": "Spanish",
+    "EN": "EN",
+    "FR": "FR",
+    "SP": "SP",
+    "HELP": "Help",
+    "LOGIN": "Login",
+    "LOGOUT": "Logout"
+  },
+  "FOOTER": {
+    "POLICY": "Privacy Policy",
+    "POLICY_BAR": "Click ACCEPT or continue if you agree to our use of cookies on this site for optimization purposes."
+  }
+}

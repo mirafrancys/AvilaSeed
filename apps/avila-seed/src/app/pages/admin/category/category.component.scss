@@ -1,0 +1,201 @@
+
+.body-container{
+  margin-top: 2rem;
+  overflow-y: hidden;
+
+  .pages-title{
+    font-size: 2.5em;
+    font-weight: 400;
+  }
+
+  .header-page {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+
+    .select-box {
+      position: relative;
+      display: inline-block;
+      width: 300px;
+      max-width: 100%;
+    
+      .select-button {
+        font-size: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 2.6rem;
+        padding: 0.675em 1em;
+        border: 1px solid var(--color-border);
+        //border-radius: 0.25rem;
+        border-radius: 6px;
+        background-color: var(--body-color);
+        cursor: pointer;
+    
+        .arrow {
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 6px solid #000;
+          transition: transform ease-in-out 0.3s;
+        }
+      }
+
+      label{
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        font-size: 17px;
+        pointer-events: none;
+        transition: .3s;
+      }
+      .select-button:focus {
+        border: 2px solid var(--color-border);
+      }
+      .select-button:focus ~ label {
+        top: 0;
+        font-size: 16px;
+        padding: 0 10px;
+        color: var(--color-bg-button);
+        background: var(--color-border);
+        border-width: 2px;
+        border-radius: 8px;
+      }
+    
+      .select-button ~ .select-dropdown {
+        display: none;
+      }
+      .select-button:focus ~ .select-dropdown {
+        position: absolute;
+        display: block;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border: 1px solid #caced1;
+        //border-radius: 0.25rem;
+        border-radius: 6px;
+        background-color: white;
+        list-style: none;
+        padding: 10px;
+        //margin: 2px 0 0;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        max-height: 200px;
+        overflow-y: auto;
+      }
+      .select-dropdown::-webkit-scrollbar {
+        width: 7px;
+      }
+      .select-dropdown::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 25px;
+      }
+      .select-dropdown::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 25px;
+      }
+      .select-dropdown li {
+        padding: 10px;
+        cursor: pointer;
+      }
+      /* Highlight the selected option */
+      .select-dropdown li.selected {
+        background-color: #f2f2f2;
+        border-radius: 4px;
+        font-weight: bold;
+      }
+      .select-dropdown li:hover,
+      .select-dropdown li:focus {
+        background-color: #f2f2f2;
+        border-radius: 4px;
+      }
+    }
+    
+    .search-box{
+      position: relative;
+      //background: blue;
+      padding-right: 2rem;
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+      width: 15rem;
+  
+      input{
+        position: absolute;
+        //width: 350px;
+        //height: 3rem;
+        top: 0;
+        left: 0;
+        height: 2.6rem;
+        width: 14rem;
+        //width: calc(100% - 2rem);
+        font-size: 17px;
+        border-radius: 6px;
+        padding: 0 15px;
+        border: 1px solid var(--color-border);
+        background: var(--body-color);
+        outline: none;
+        //color: #fff; 
+      }
+      label{
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        //color: #fff;
+        font-size: 17px;
+        pointer-events: none;
+        transition: .3s;
+      }
+      .icon-search{
+        position: absolute;
+        top: .75rem;
+        right: 1.25rem;
+        font-size: 17px;
+      }
+      input:focus,
+      input.field-valid{
+        border: 2px solid var(--color-border);
+      }
+      input:focus ~ label,
+      input.user-valid ~ label{
+        top: 0;
+        font-size: 16px;
+        padding: 0 10px;
+        color: var(--color-bg-button);
+        background: var(--color-border);
+        border-width: 2px;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .box-table{
+    padding-top: 1.25rem;
+
+    table {
+      width: 100%;
+      text-align: left;
+      border-collapse: collapse; 
+
+      .table-head{
+        background-color: goldenrod;
+      }
+
+      td{
+        border-top: 1px solid yellowgreen; 
+      }
+      td, 
+      th { 
+        border-bottom: 1px solid yellowgreen; 
+        padding: .75rem; 
+        text-align: left;
+      }      
+
+      .abtn-round{
+        border-radius: 50%;
+        object-position: center;
+        overflow: hidden; //hiding image overflow
+      }
+    }
+  }
+}

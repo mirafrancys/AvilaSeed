@@ -1,0 +1,22 @@
+{
+  "name": "seed-server",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/seed-server/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "command": "tsc -p apps/seed-server/tsconfig.json",
+      "outputs": ["{workspaceRoot}/dist/apps/seed-server"]
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "options": {
+        "buildTarget": "seed-server:build",
+        "watch": true
+      }
+    },
+    "test": {
+      "command": "vitest run --dir apps/seed-server"
+    }
+  }
+}

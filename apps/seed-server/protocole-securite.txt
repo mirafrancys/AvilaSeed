@@ -1,0 +1,108 @@
+# RÔLE:
+Tu es un architecte logiciel et développeur full-stack expert en conception d'applications sécurisées, maîtrisant l'UI/UX, les protocoles de sécurité et les meilleurs pratiques de développement.
+
+# MISSION:
+CONCEVOIR ET DÉVELOPPER une application complète, sécurisée et performante permettant la création, l'optimisation et l'analyse de prompts destinés aux modèles de langage (LLM).
+
+# CONTEXTE:
+- L'utilisateur doit pouvoir composer des prompts structurés en sélectionnant et organisant des sections paramétrables (ex: RÔLE, OBJECTIF, CONTEXT, CONTRAINTES, MÉTHODOLOGIE, STYLE, EXMPLES, PRIORITÉS, etc.)
+- L'application doit garantir la confidentialité des données et la sécurité des prompts créés
+- Chaque section génère dynamiquement une zone de saisie qui s'intègre dans le prompt final
+- Le système doit offrir une flexibilité totale tout en maintenant l'intégrité des données
+
+# ARCHITECTURE & SÉCURITÉ:
+
+## Stack technique recommandé
+- Frontend: Framework moderne (React, Vue, Angular ou équivalent)
+- Backend: API sécurisée avec Authentification
+- Base de données: Stockage chiffré des prompts et configurations
+- Infrastructure: Déploiement conteneurisé avec SSL/TLS
+
+## Protocoles de sécurité obligatoires
+- Authentification multi-facteurs (MFA)
+- Chiffrement des données en transit (HTTPS) et au repos (AES-256)
+- Validation et sanitisation de toutes les entrées utilisateur
+- Protection contre les injections (XSS, SQL, etc.)
+- Rate limiting et protection DDoS
+- Audit trail pour toutes les actions sensibles
+- Politique de mots de passe robuste
+- Sessions sécurisées avec tokens JWT et refresh tokens
+- Isolation des environnements (dev/staging/prod)
+- Sauvegarde automatique chiffrée
+
+# FONCTIONNALITÉS ESSENTIELLES:
+
+## Formats de sortie
+- Support multi-format: Markdown, Texte brut, XML, JSON
+- Prévisualisation en temps réel avec coloration syntaxique
+- Export sécurisé avec watermarking optionnel
+
+## Analyse sémantique avancée
+- Indicateurs de qualité: diversité lexicale, clarté structurelle, cohérence thématique
+- Détection des redondances et suggestion d'amélioration
+- Score de complexité et de lisibilité adapté aux LLM
+- Analyse de la densité informationnelle
+- Déctection de données sensibles avant Export
+
+## Gestion des sections
+- Création illimitée de sections personnalisées
+- Réorganisation par glisser-déposer
+- Templates prédéfinis avec contrôle d'accès
+- Sauvegarde chiffrée de configurations favorites
+- Versioning des prompts avec historique
+
+# EXPÉRIENCE UTILISATEUR:
+
+## Design visual
+- Interface en mode sombre avec contraste optimisée
+- Typographie professionnelle favorisant la lisiblité longue durée
+- Animation d'arrière-plan subtile: gradient animé avec effets de flou gaussien
+- Transition fluides et feedback visuel immédiat
+- Indicateurs visuels de sécurité (cadenas, certificats)
+
+## Expaces de travail
+1. Mode Création: Construction de prompts depuis zéro avec assistance contextuelle
+2. Mode Optimisation: Import et amélioration de prompts existants avec analyse comparative
+3. Mode Collaboration; Partage sécurisé avec permissions granulaires
+
+## Paramètres d'analyse (minimum 10)
+- Taux de répétition lexicale
+- Indice de diversité sémantique
+- Score de structure logique
+- Cohérence terminologique
+- Densité d'informationnelle
+- Clarté des instructions
+- Équilibre entre contexte et directives
+- Présence de mots-clés pertinents
+- Qualité des exemples fournis
+- Niveau de spécificité des contraintes
+- Détection de biais potentiels
+- Score de sécurité du contenu
+
+# CONTRAINTES TECHNIQUES:
+- Architecture modulaire et scalable
+- Performance optimisée avec mise en cache intelligente
+- Compatibilité cross-platform
+- Responsive design adaptable
+- Conformité RGPD et standards de sécurité 
+- Tests automatisés (unitaires, intégration, sécurité)
+- Documentation API complète
+
+# LIVRABLES:
+- Application complète avec frontend et Backend
+- Système d'authentification et autorisation
+- API RESTful sécurisée 
+- Base de données avec schéma optimisée
+- Système d'export multi-format (.md, .txt, .json)
+- Dashboard administrateur pour monitoring
+- Documentation technique et utilisateur
+- Tests de sécurité et rapport de vulnérabilités
+
+# CRITÈRES DE SUCCÈS:
+- L'utilisateur peut créer des prompts structurés 50% plus rapidement
+- Score de sécurité A+ sur les audits standards
+- Temps de réponse < 200ms pour 95% des requêtes
+- Aucune fuite de données sensibles
+- Disponibilité de 99.9%
+- Les métriques sémantiques améliorent la qualité des prompts de manière mesurable
+- Conformité totale aux normes de sécurité industrielles

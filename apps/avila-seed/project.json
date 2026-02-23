@@ -1,0 +1,75 @@
+{
+  "name": "avila-seed",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/avila-seed/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "options": {
+        "outputPath": "dist/apps/avila-seed",
+        "index": "apps/avila-seed/src/index.html",
+        "browser": "apps/avila-seed/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/avila-seed/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/avila-seed/public"
+          }
+        ],
+        "styles": ["apps/avila-seed/src/styles.scss"],
+        "scripts": [],
+        "server": "apps/avila-seed/src/main.server.ts",
+        "outputMode": "server",
+        "ssr": {
+          "entry": "apps/avila-seed/src/server.ts"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kB",
+              "maximumError": "1MB"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "4kB",
+              "maximumError": "8kB"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "port": 4215
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "avila-seed:build:production"
+        },
+        "development": {
+          "buildTarget": "avila-seed:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "test": {
+      "command": "vitest run --dir apps/avila-seed"
+    }
+  }
+}

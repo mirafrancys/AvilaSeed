@@ -1,0 +1,50 @@
+<div class="container">
+  <ul class="menu-container">
+    <li class="menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a routerLink="home">Accueil</a>
+    </li>
+    <li class="menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a routerLink="shop/0">Boutique</a>
+      <i class='bx bxs-chevron-down' ></i>
+      <ul class="submenu-container">
+        @for(item of categoryTypes; track item){
+          <li class="submenu-item" routerLinkActive="link-active" [routerLinkActiveOptions]="{exact: true}">
+            <a [routerLink]="['shop', item.categoryTypeId]">{{ item.categoryTypeDesc }}</a>
+            <i class='bx bxs-chevron-left icon-left' ></i>
+            <i class='bx bxs-chevron-right icon-right' ></i>
+            <ul class="submenu2-container">
+              @for(category of SelectCategoryType(item.categoryTypeId); track category){
+                <li class="submenu2-item" routerLinkActive="category-active" [routerLinkActiveOptions]="{exact: true}">
+                  <a [routerLink]="['products', category.categoryId]">{{category.categoryName}}</a>
+                </li>
+              }
+            </ul>
+          </li>
+        }
+      </ul>
+    </li>
+    <li class="menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a routerLink="about">À propos</a>
+    </li>
+    <li class="menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a routerLink="events">Événements</a>
+    </li>
+    <li class="menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a routerLink="contact">Contact</a>
+    </li>
+    <li class="menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a routerLink="admin">Admin</a>
+      <ul class="submenu-container">
+        <li class="submenu-item" routerLinkActive="link-active" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="admin/category">Category</a>
+        </li>
+        <li class="submenu-item" routerLinkActive="link-active" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="admin/product">Product</a>
+        </li>
+        <li class="submenu-item" routerLinkActive="link-active" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="admin/product">Event</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

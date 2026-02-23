@@ -1,0 +1,41 @@
+<div class="body-container">
+  <div class="pages-title">
+    Categorie
+  </div>
+  <form [formGroup]="filterForm" class="header-page">
+    <div class="select-box">
+      <button class="select-button" >
+        <span class="selected-value"></span>
+        <span class="arrow"></span>
+      </button>
+      <label>Select category type</label>
+      <ul class="select-dropdown hidden" formControlName="selectcategory">
+        @for(item of categoryTypes; track item){
+          <li value="item.categoryTypeId">{{ item.categoryTypeDesc }}</li>
+        }
+      </ul>
+    </div>
+    <div class="search-box">
+      <input type="search" name="" id="search" formControlName="searchCategory">
+      <label for="search">Search</label>
+      <i class='bx bx-search-alt-2 icon-search'></i>
+    </div>
+  </form>
+  <div class="box-table">
+    <table>
+      <tr class="table-head">
+        <th>Category Type</th><th>Code</th><th>Name</th><th>Active</th><th></th>
+      </tr>
+      @for(item of categories; track item){
+        <tr>
+          <td>{{ getCategoryTypeDesc(item.categoryTypeId) }}</td>
+          <td>{{ item.slug }}</td>
+          <td>{{ getCategoryName(item) }}</td>
+          <td><img src="./images/apply16.png" alt=""></td>
+          <td><a class="abtn-round" (click)="edit(item)"><img src="" alt=""></a></td>
+        </tr>
+      }
+    </table>
+    
+  </div>
+</div>

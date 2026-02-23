@@ -1,0 +1,22 @@
+<div class="body-container">
+  <h1>Connexion à votre compte client</h1>
+  <div class="body-page">
+    <form [formGroup]="loginForm">
+      <div class="input-box">
+        <span class="icon"><i class="bx bxs-envelope"></i></span>
+        <input type="email" id="email_address" name="email_address" formControlName="email" required>
+        <label class="input-required" for="email_address">Email Address</label>
+      </div>
+      <div class="input-box">
+        <span class="icon"><i class="bx bxs-lock"></i></span>
+        <input type="password" id="password" name="password" formControlName="password" required>
+        <label class="input-required" for="password">Mot de passe</label>
+      </div>
+      <div class="box-btn">
+        <button class="btn login-btn" [disabled]="!loginForm.valid" (click)="login()">Connexion</button>
+        <button class="btn register-btn" (click)="register()">Créer</button>
+      </div>
+      <a href="#">J'ai oublié mon mot de passe</a>
+    </form>
+  </div>
+</div>

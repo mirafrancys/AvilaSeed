@@ -1,0 +1,35 @@
+<div class="body-container">
+  <h1>Contact</h1>
+  <div class="body-page">
+    <p>Notez que nous ne vendons pas nos produits sur place.  Nous sommes une boutique en ligne sans commande téléphonique.  Nous avons des points de vente en Estrie. Nous sommes à la fois producteur de semences et vendeur de nos semences, on est occupé :)</p>
+    <form [formGroup]="form">
+      <div class="region-box">
+        <div class="input-box">
+          <span class="icon"><i class="bx bxs-user"></i></span>
+          <input type="text" id="name" name="name"  formControlName="name" required>
+          <label class="input-required" for="name">Full Name</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><i class="bx bxs-envelope"></i></span>
+          <input type="email" id="email_address" name="email_address" formControlName="email" required>
+          <label class="input-required" for="email_address">Email Address</label>
+        </div>
+      </div>
+      <div class="region-box">
+        <div class="input-box">
+          <span class="icon"><i class="bx bxs-phone"></i></span>
+          <input type="number" id="phone" name="phone" formControlName="phone">
+          <label for="phone">Mobile Number</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><i class="bx bxs-comment-dots"></i></span>
+          <input type="text" id="email_subject" name="email_subject" formControlName="subject" required>
+          <label class="input-required" for="email_subject">Email Subject</label>
+        </div>
+      </div>
+      <textarea name="" id="" cols="30" rows="10" placeholder="Votre message" formControlName="message"></textarea>
+      <button class="btn send-btn" [disabled]="!form.valid" (click)="sendEmail()">Envoyer Message</button>
+    </form>
+  </div>
+</div>
+

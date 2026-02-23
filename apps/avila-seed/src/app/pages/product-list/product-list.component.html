@@ -1,0 +1,33 @@
+<div class="body-container">
+  <h1>Category: {{ categoryName }}</h1>
+  <div class="body-page">
+    <div class="category-header">
+      {{ categoryDesc }}
+    </div>
+    <div class="product-container">
+      @for(product of products; track product){
+        <div class="product-item" (click)="viewProduct(product.productId)">
+          <div class="item-image">
+            <img src="./images/feve_HM032.webp" [alt]="product.productName">
+          </div>
+          <div class="item-info">
+            <div class="item-name">
+              {{ product.productName }}
+            </div>
+            <div class="item-stock">
+              <div class="price">
+                {{ product.productPrice }}$
+              </div>
+              @if(product.inStock){
+                <div class="stock">EN STOCK</div>
+              } @else {
+                <div class="not-stock">RUPTURE DE STOCK</div>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row row-container">
+    <div class="col-xs">
+      <div class="social-media">
+        <a href="">
+          <i class='bx bxl-facebook' ></i>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs">
+      <ul>
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="terms-and-conditions" >Termes et conditions</a>
+        </li>
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="confidentiality" >Confidentialité</a>
+        </li>
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="shipping" >Politique d'expédition</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-xs">
+      <div class="copyright">Copyright © Avila {{ date | date: 'YYYY' }}</div>
+    </div>
+  </div>
+</div>
+

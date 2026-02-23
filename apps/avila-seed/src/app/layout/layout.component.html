@@ -1,0 +1,18 @@
+<div class="main-container">
+  <div class="headers-container">
+    <header class="topbar-container">
+      <app-topbar [languages]="languages" (languageChange)="languageCode"></app-topbar>
+    </header>
+    <div class="menubar-container">
+      <app-menubar [languageCode]="languageCode"></app-menubar>
+    </div>
+  </div>
+  <main class="router-container">
+    <router-outlet> </router-outlet>
+  </main>
+  <!-- <ng-container *ngTemplateOutlet="cookies"></ng-container> -->
+  <footer class="footer-container">
+    <app-footer></app-footer>
+  </footer>
+</div>
+

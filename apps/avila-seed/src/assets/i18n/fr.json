@@ -1,0 +1,21 @@
+{
+  "TOPBAR": {
+    "TITLE": "MySeed",
+    "ENGLISH": "Anglais",
+    "FRENCH": "Français",
+    "SPANISH": "Espagnol",
+    "EN": "EN",
+    "FR": "FR",
+    "SP": "SP",
+    "HELP": "Aide",
+    "LOGIN": "Connecter",
+    "LOGOUT": "Se déconnecter"
+  },   
+  "FOOTER": {
+    "POLICY": "Politique de confidentialité",
+    "POLICY_BAR": "Cliquez sur ACCEPTER ou continuez si vous acceptez notre utilisation de témoins (cookies) sur ce site à des fins d’optimisation."
+  },
+  "HOME": {
+    "WELCOME": "Bienvenu(e)"
+  }
+}

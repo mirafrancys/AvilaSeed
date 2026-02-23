@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+@use '../../../node_modules/flexboxgrid/css/flexboxgrid.css';
+@use './styles/variables';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  height: 100%;
+  overflow-x: hidden;
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  height: 100%;
+  letter-spacing: 0.006rem;
+  margin: 0;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--body-color);
+  border-radius: 8px;
+
+  &:hover{
+    background-color: var(--title-color);
+  }
+}
+
+.body-container{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  //padding-top: 5rem;
+}
+.btn{
+  padding: 1rem 1.7rem;
+  background-color: var(--color-bg-topbar);
+  color: var(--text-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: .6s ease;
+}
+.btn:hover{
+  background: transparent;
+  border: 2px solid var(--color-border);
+  box-shadow: 0 0 10px 0 var(--color-bg-topbar) inset,
+              0 0 10px 4px var(--color-bg-topbar);
+  border-radius: 16px;
+  color: var(--title-color);
+}

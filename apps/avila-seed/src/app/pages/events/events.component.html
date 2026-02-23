@@ -1,0 +1,43 @@
+<div class="body-container">
+  <h1>Activités et ateliers</h1>
+  <div class="body-page">
+    <div class="card-container">
+      @for(event of events; track event){
+        <div class="card-item">
+          <div class="card-item-image">
+            <img src="" alt="">
+          </div>
+          <div class="card-item-body">
+            <div class="card-item-header">
+              <div class="card-item-title">{{ event.eventTitle }}</div>
+              <div class="card-item-date">
+                <div class="item-date">
+                  <i class='bx bx-calendar-event'></i>
+                  {{ event.eventDate }}
+                </div>
+                <div class="item-hour">
+                  <i class='bx bx-time-five' ></i>
+                  {{ event.eventHour }}
+                </div>
+              </div>
+            </div>
+            <div class="card-item-desc">{{ event.eventDescription }}</div>
+            <div class="card-item-content">
+              <div class="card-item-address">
+                <i class='bx bx-location-plus' ></i>
+                {{ event.eventAddress }}
+              </div>
+              <div class="card-item-action">
+                <a class="btn card-item-link" [href]="'event.eventLink'">
+                  <i class='bx bx-link'></i> 
+                  <span> Voir le détail</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>
+
